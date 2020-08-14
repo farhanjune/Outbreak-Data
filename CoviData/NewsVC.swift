@@ -1,0 +1,157 @@
+//
+//  NewsVC.swift
+//  CovidData
+//
+//  Created by Farhan Juneja on 8/7/20.
+//  Copyright © 2020 Farhan Juneja. All rights reserved.
+//
+import UIKit
+import SwiftyJSON
+import SDWebImage
+import Alamofire
+
+
+class NewsVC: UIViewController {
+
+    @IBOutlet weak var newsTableView: UITableView!
+    
+    var titleArray = [String]()
+    var newsSourceArray = [String]()
+    var imageURLArray = [String]()
+    var newsStoryUrlArray = [String]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        newsTableView.delegate = self
+        newsTableView.dataSource = self
+        
+        
+        self.newsTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getNewsData { (success) in
+            if success {
+                print("success")
+                
+           //     self.imageURLArray = self.imageURLArray.filter { $0 != ""} //filter array to remove nil values
+                self.newsTableView.reloadData()
+                print(self.imageURLArray.count)
+            } else {
+                print("doesnt work ")
+            }
+        }
+        
+    }
+        
+}
+
+    
+
+
+extension NewsVC: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+       return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+       return imageURLArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = newsTableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? NewsCell else { return UITableViewCell() }
+        
+        var titles = String()
+        var sources = String()
+        
+        if titleArray.count > 0 {
+             titles = titleArray[indexPath.row ]
+        } else {
+             titles = ""
+        }
+        
+        if newsSourceArray.count > 0 {
+            sources = newsSourceArray[indexPath.row]
+        } else {
+            sources = ""
+        }
+    
+        if imageURLArray.count > 0 {
+            
+            cell.newsImage.sd_setImage(with: URL(string: imageURLArray[indexPath.row])) { (image, error, cache, urls) in
+                if (error != nil) {
+                    cell.newsImage.image = UIImage(named: "newsPlaceholder")
+                } else {
+                    cell.newsImage.image = image
+                }
+            }
+            
+        } else {
+            cell.newsImage.image = UIImage(named: "newsPlaceholder")!
+        }
+        
+        
+        cell.newsImage.layer.cornerRadius = 10
+        
+        cell.configureCell(newsTitle: titles, newsSource: sources)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        let urls = newsStoryUrlArray[(indexPath?.row)!]
+    
+        UIApplication.shared.open( URL(string: urls)!, options: [:] ) { (success) in
+            if success {
+                print("open link")
+            }
+        }
+        
+        
+    }
+    
+}
+
+extension NewsVC {
+    
+    func getNewsData(complete: @escaping (_ status: Bool) -> ()) {
+        
+    AF.request("https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=96983db1075641f283b65aff6d422cff", method: .get).responseJSON { (response) in
+            
+           
+        switch response.result {
+        case let .success(value):
+            print(value)
+        case let .failure(error):
+            print(error)
+        }
+        
+        guard let value = response.value else { return }
+            
+                let json = JSON(value)
+                
+                for item in json["articles"].arrayValue {
+                    
+                
+                    self.titleArray.append(item["title"].stringValue)
+                    self.newsSourceArray.append(item["source"]["name"].stringValue)
+                    self.imageURLArray.append(item["urlToImage"].stringValue)
+                    self.newsStoryUrlArray.append(item["url"].stringValue)
+                
+                }
+            complete(true)
+        
+        }
+    
+    }
+}
+
