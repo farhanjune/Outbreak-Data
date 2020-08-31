@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CF2268FA-30E9-4333-B0D2-133B6C05D8B6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB458E9C-DFA6-4073-B41B-389FFF139750"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidData/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidData/NewsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "NewsVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - 59ff64576b0d9c5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.newsTableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - 5548a95f4165a64e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.newsTableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - 48f0b0a8499267df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.newsTableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - 6a1b5b20a21c80e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.newsTableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - be3a0e0d6430303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CovidData.NewsVC"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "D4ABA8F1-F0FF-44C7-8B4F-663D27575581 - 5193d14c03f30eac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CovidData.NewsVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CovidData.NewsVC&gt;"
+                  moduleName = "CovidData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfj/Desktop/CovidData/CovidData/NewsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "221">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60CF6BD0-5891-4D90-B353-1F833BC94722"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidData/StatisticsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "StatisticsVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
