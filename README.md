@@ -11,7 +11,7 @@
 
 **This application provides essential statistical data about the COVID-19 disease along with steps to prevent and defend against it. The user may view constantly updated COVID-19 reported stats on country and global scales.**   
 
-<img src="Images/4ss65.png" height = "450"> <img src="Images/3ss65.png" height = "450"> <img src="Images/2ss65.png" height = "450"> <img src="Images/sympss.png" height = "450"> 
+<img src="Images/3ss65.png" height = "450"> <img src="Images/2ss65.png" height = "450"> <img src="Images/4ss65.png" height = "450"> <img src="Images/sympss.png" height = "450"> 
 
 <img src="Images/1ss65.png" height = "450"> <img src="Images/newss2.png" height = "450"> <img src="Images/newss3.png" height = "450"> 
 
